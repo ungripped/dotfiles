@@ -1,0 +1,40 @@
+# config.yaml
+- defaults:
+    link:
+      create: true
+      force: true
+
+- clean: ['~']
+
+# dotfiles
+- link:
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore: git/gitignore
+#    ~/.ssh/config: ssh/config
+    
+- shell:
+  - description: oh-my-zsh
+    command: 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" --unattended || :'
+    stdout: true
+    stdin: true
+  - description: change shells
+    command: chsh -s $(which zsh)
+    stdout: true
+    stdin: true
+  - description: install homebrew
+    command: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    stdout: true
+    stdin: true
+  - description: install homebrew formulas
+    command: bash -c "cd mac && brew bundle"
+    stdout: true
+    stdin: true
+#  - description: install npm packages
+#    command: bash -c "< npm/packages.txt xargs npm install -g"
+#    stdout: true
+#    stdin: true
+
+# can't clone repo if already exists
+- link:
+    ~/.zshrc: zsh/zshrc
+    ~/.oh-my-zsh/custom: zsh/custom
