@@ -18,6 +18,13 @@
 	excludesfile = ~/.gitignore
         editor = code --wait
 	autocrlf = input
+	compression = 0
+        packedGitLimit = 512m 
+        packedGitWindowSize = 512m 
+[pack] 
+        deltaCacheSize = 2047m 
+        packSizeLimit = 2047m 
+        windowMemory = 2047m
 [apply]
 	whitespace = nowarn
 [format]
@@ -28,3 +35,6 @@
         ui = auto
 [alias]
 	co = checkout
+[http]
+	postBuffer = 1048576000
+	maxRequestBuffer = 512M
