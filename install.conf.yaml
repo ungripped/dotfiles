@@ -21,6 +21,10 @@
     command: chsh -s $(which zsh)
     stdout: true
     stdin: true
+  - description: Set macOS defaults
+    command: bash ./mac/defaults.sh
+    stdout: true
+    stdin: true
   - description: install homebrew
     command: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     stdout: true
