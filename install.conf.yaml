@@ -29,6 +29,14 @@
     command: bash -c "cd mac && brew bundle"
     stdout: true
     stdin: true
+  - description: install python
+    command: proto install python 3.13.7
+    stdout: true
+    stdin: true
+  - description: install node
+    command: proto install node
+    stdout: true
+    stdin: true
 #  - description: install npm packages
 #    command: bash -c "< npm/packages.txt xargs npm install -g"
 #    stdout: true

@@ -8,8 +8,9 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias gs='git status'
 alias ff='find . -name '
+alias vsc='code'
 
-bindkey "[D" backward-word
-bindkey "[C" forward-word
-bindkey "^[a" beginning-of-line
-bindkey "^[e" end-of-line
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
+bindkey "^[[1;4D" beginning-of-line
+bindkey "^[[1;4C" end-of-line

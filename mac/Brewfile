@@ -1,3 +1,9 @@
-brew "cocoapods"
-brew "carthage"
-brew "node"
+tap "cjbassi/ytop"
+
+brew "curl"
+brew "wget"
+brew "ytop"
+
+brew "proto"
+
+cask "quicklook-json"
